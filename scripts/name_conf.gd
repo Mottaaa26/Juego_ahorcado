@@ -35,8 +35,7 @@ func _on_button_continuar_pressed() -> void:
 	await audio.finished
 	
 	# OBTENEMOS EL CONTENIDO DEL TEXTEDIT Y HACEMOS VALIDACIONES BASE
-	var nombre = $TextEditNombre.get_line(0)
-	nombre.to_lower()
+	var nombre = $TextEditNombre.get_line(0).strip_edges().to_lower()
 	
 	# LAS VALIDACIONES SON QUE EL NOMBRE DEBE SER MENOR A 8 Y QUE SOLO CONTENGA LETRAS Y NUMEROS.
 	if(nombre.length() > 8):

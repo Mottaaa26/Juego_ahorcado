@@ -1,5 +1,111 @@
-[gd_scene format=3 uid="uid://c8mo5w2hqqxpj"]
+[gd_scene load_steps=7 format=3 uid="uid://c8mo5w2hqqxpj"]
+
+[ext_resource type="Script" uid="uid://dy417bus1h47d" path="res://scripts/dificultad_conf.gd" id="1_55fr3"]
+[ext_resource type="Texture2D" uid="uid://ceaj2xytttlh" path="res://media/imagenes/main_menu.png" id="1_181ix"]
+[ext_resource type="Texture2D" uid="uid://bc02rtx67qijm" path="res://media/imagenes/game_title.png" id="2_55fr3"]
+[ext_resource type="FontFile" uid="uid://c3y1owof88k4m" path="res://fonts/Good-Game.ttf" id="3_adodk"]
+[ext_resource type="AudioStream" uid="uid://btbqovhibck81" path="res://media/sonidos/sonido_botones.wav" id="5_adodk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_181ix"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.5686275, 0.3019608, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.1882353)
+shadow_size = 4
 
 [node name="DificultadConf" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_55fr3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_181ix")
+
+[node name="TextureRectTitulo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -404.0
+offset_right = 360.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_55fr3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -484.0
+offset_top = -1.0
+offset_right = 484.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
+theme_override_fonts/font = ExtResource("3_adodk")
+theme_override_font_sizes/font_size = 100
+text = "SELECCIONA LA DIFICULTAD"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -181.5
+offset_top = -375.0
+offset_right = 181.5
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="ButtonMedio" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_adodk")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_181ix")
+text = "NORMAL"
+
+[node name="ButtonDificil" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_adodk")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_181ix")
+text = "DIFICIL"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_adodk")
+
+[connection signal="pressed" from="VBoxContainer/ButtonMedio" to="." method="_on_button_medio_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonDificil" to="." method="_on_button_dificil_pressed"]
