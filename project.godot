@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="lights letters action"
+run/main_scene="uid://n8jop40jk4tx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [display]
