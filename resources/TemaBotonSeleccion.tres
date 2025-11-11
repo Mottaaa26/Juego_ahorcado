@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cp1g76ms0demf"]
+
+[ext_resource type="FontFile" uid="uid://dga1rhrtt8dlx" path="res://fonts/Cartoonish.ttf" id="1_y3bhf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3bhf"]
+bg_color = Color(0.98460776, 0.5949591, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25q70"]
+bg_color = Color(0.9843137, 0.59607846, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w80ip"]
+bg_color = Color(1, 0.6392157, 0.21568628, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jdx2"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Button/colors/font_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_y3bhf")
+Button/styles/focus = SubResource("StyleBoxFlat_y3bhf")
+Button/styles/hover = SubResource("StyleBoxFlat_25q70")
+Button/styles/normal = SubResource("StyleBoxFlat_w80ip")
+Button/styles/pressed = SubResource("StyleBoxFlat_4jdx2")

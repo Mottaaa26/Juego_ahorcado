@@ -1,0 +1,187 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3qhprrffdunu"]
+
+[ext_resource type="Texture2D" uid="uid://ceaj2xytttlh" path="res://sprites/backgrounds/main_menu.png" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://dga1rhrtt8dlx" path="res://fonts/Cartoonish.ttf" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://wcytufaiji6r" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bc02rtx67qijm" path="res://sprites/titles/ChatGPT_Image_12_oct_2025__10_16_46__1_-removebg-preview.png" id="2_bqqt6"]
+[ext_resource type="Theme" uid="uid://dw62sud01ayj6" path="res://resources/MainMenuTheme.tres" id="5_8ln24"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
+texture = ExtResource("1_ekxnf")
+modulate_color = Color(0.86036915, 0.8603692, 0.8603692, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.38039216, 0.38039216, 0.38039216, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.38039216, 0.38039216, 0.38039216, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqqt6"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bqqt6")
+
+[node name="ContainerTitulo" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 90
+
+[node name="CenterContainer" type="CenterContainer" parent="ContainerTitulo"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Titulo" type="TextureRect" parent="ContainerTitulo/CenterContainer"]
+custom_minimum_size = Vector2(700, 380)
+layout_mode = 2
+texture = ExtResource("2_bqqt6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuPrincipal" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -276.0
+offset_right = 148.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 330
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="MenuPrincipal"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PlayButton" type="Button" parent="MenuPrincipal/ButtonsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21230447, 0.21230504, 0.21230465, 1)
+theme_override_colors/font_focus_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+theme_override_colors/font_pressed_color = Color(0.109531246, 0.2764533, 0.4927439, 1)
+theme_override_colors/font_hover_color = Color(0.075291924, 0.20742655, 0.38097402, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bqqt6")
+text = "Jugar"
+
+[node name="ExitButton" type="Button" parent="MenuPrincipal/ButtonsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21230447, 0.21230504, 0.21230465, 1)
+theme_override_colors/font_focus_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+theme_override_colors/font_pressed_color = Color(0.109531246, 0.2764533, 0.4927439, 1)
+theme_override_colors/font_hover_color = Color(0.075291924, 0.20742655, 0.38097402, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bqqt6")
+text = "salir
+"
+
+[node name="MenuNombre" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -236.5
+offset_right = 150.0
+offset_bottom = 236.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 330
+
+[node name="CenterContainerNombre" type="CenterContainer" parent="MenuNombre"]
+layout_mode = 2
+
+[node name="VBoxNombre" type="VBoxContainer" parent="MenuNombre/CenterContainerNombre"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NameLabel" type="Label" parent="MenuNombre/CenterContainerNombre/VBoxNombre"]
+layout_mode = 2
+theme = ExtResource("5_8ln24")
+theme_override_colors/font_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+theme_override_font_sizes/font_size = 50
+text = "Ingresa tu nombre"
+
+[node name="NameImput" type="LineEdit" parent="MenuNombre/CenterContainerNombre/VBoxNombre"]
+custom_minimum_size = Vector2(450, 100)
+layout_mode = 2
+theme = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 40
+alignment = 1
+
+[node name="ButtonsContainer" type="MarginContainer" parent="MenuNombre/CenterContainerNombre/VBoxNombre"]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="HBoxBotones" type="HBoxContainer" parent="MenuNombre/CenterContainerNombre/VBoxNombre/ButtonsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 130
+
+[node name="GoBackButton" type="Button" parent="MenuNombre/CenterContainerNombre/VBoxNombre/ButtonsContainer/HBoxBotones"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme = ExtResource("5_8ln24")
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="GoBackButton2" type="Button" parent="MenuNombre/CenterContainerNombre/VBoxNombre/ButtonsContainer/HBoxBotones"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme = ExtResource("5_8ln24")
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "CONTINUAR"
+
+[connection signal="pressed" from="MenuPrincipal/ButtonsContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="focus_entered" from="MenuNombre/CenterContainerNombre/VBoxNombre/NameImput" to="." method="_on_name_imput_focus_entered"]
+[connection signal="text_changed" from="MenuNombre/CenterContainerNombre/VBoxNombre/NameImput" to="." method="_on_name_imput_text_changed"]
+[connection signal="pressed" from="MenuNombre/CenterContainerNombre/VBoxNombre/ButtonsContainer/HBoxBotones/GoBackButton" to="." method="_on_go_back_button_pressed"]
+[connection signal="pressed" from="MenuNombre/CenterContainerNombre/VBoxNombre/ButtonsContainer/HBoxBotones/GoBackButton2" to="." method="_on_go_back_button_pressed"]

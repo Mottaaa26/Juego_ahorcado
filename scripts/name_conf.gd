@@ -1,0 +1,31 @@
+extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+# FUNCIONALIAD DEL BOTON REGRESAR:
+# AL OPRIMIR ESTE BOTÓN, NOS LLEVARÁ DE REGRESO AL MENÚ PRINCIPAL.
+func _on_button_regresar_pressed() -> void:
+	
+	# EJECUTAMOS EL SONIDO CON EL METODO .PLAY() Y USAMOS AWAIT PARA ESPERAR A QUE EL PROCESO TERMINE.
+	var audio = $VBoxContainer/AudioStreamPlayer
+	audio.play()
+	await audio.finished
+	
+	# TENEMOS QUE OBTENER LA RUTA DE LA ESCENA QUE QUEREMOS EJECUTAR CON EL METODO CHANGE_SCENE_TO_FILE
+	# DEL OBJETO GET_TREE() QUE OBTIENE EL ARBOL DE EJECUCION PRINCIPAL DEL JUEGO.
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	
+# FUNCIONALIDAD DEL BOTON CONTINUAR:
+# AL OPRIMIR EL BOTON, PRIMERO SE VALIDARÁ EL NOMBRE DEL USUARIO, SI ESTE CUMPLE CON LOS REQUISITOS
+# DE ENTRADA Y SI NO HAY OTRO USUARIO REGISTRADO CON ESE NOMBRE EN LA EJECUCIÓN ACTUAL.
+# (LA PERSISTENCIA DE LOS DATOS SERÁ TEMPORAL POR FALTA DE TIEMPO DE DESARROLLO).
+func _on_button_continuar_pressed() -> void:
+	pass # Replace with function body.

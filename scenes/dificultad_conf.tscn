@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c8mo5w2hqqxpj"]
+
+[node name="DificultadConf" type="Control"]
+layout_mode = 3
+anchors_preset = 0

@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dw62sud01ayj6"]
+
+[ext_resource type="FontFile" uid="uid://dga1rhrtt8dlx" path="res://fonts/Cartoonish.ttf" id="1_md4pr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nilmu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7kkd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l74o5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md4pr"]
+
+[resource]
+Button/colors/font_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+Button/colors/font_focus_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+Button/colors/font_hover_color = Color(0.07450981, 0.20784314, 0.38039216, 1)
+Button/colors/font_pressed_color = Color(0.10980392, 0.27450982, 0.49411765, 1)
+Button/fonts/font = ExtResource("1_md4pr")
+Button/styles/focus = SubResource("StyleBoxEmpty_nilmu")
+Button/styles/hover = SubResource("StyleBoxEmpty_l7kkd")
+Button/styles/normal = SubResource("StyleBoxFlat_l74o5")
+Button/styles/pressed = SubResource("StyleBoxEmpty_md4pr")
+Label/colors/font_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+Label/fonts/font = ExtResource("1_md4pr")
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_outline_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_placeholder_color = Color(1, 1, 1, 1)
+LineEdit/font_sizes/font_size = 35
+LineEdit/fonts/font = ExtResource("1_md4pr")
