@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ijqax7103bob"]
+[gd_scene load_steps=5 format=3 uid="uid://ijqax7103bob"]
 
 [ext_resource type="Texture2D" uid="uid://ceaj2xytttlh" path="res://media/imagenes/main_menu.png" id="1_7nptk"]
+[ext_resource type="Script" uid="uid://bpyg4wouje4lh" path="res://scenes/in_game.gd" id="1_h5xqe"]
 [ext_resource type="FontFile" uid="uid://c3y1owof88k4m" path="res://fonts/Good-Game.ttf" id="2_ipuqq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5xqe"]
@@ -23,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h5xqe")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -89,23 +91,39 @@ theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxFlat_h5xqe")
 text = "SALIR"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ContenedorPregunta" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1026.5
-offset_top = -48.0
-offset_right = 1026.5
-offset_bottom = 48.0
+offset_left = -579.375
+offset_top = -348.0
+offset_right = 579.375
+offset_bottom = -123.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="pregunta" type="Label" parent="VBoxContainer"]
+[node name="pregunta" type="Label" parent="ContenedorPregunta"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 theme_override_fonts/font = ExtResource("2_ipuqq")
 theme_override_font_sizes/font_size = 100
-text = "CUANTOS HIJOS TIENE?AS DAD ASD ADS ASDAS DAS ASD "
+text = "ASASDASMDAS"
+autowrap_mode = 1
+
+[node name="ContenedorLetras" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1080.0
+offset_top = -613.0
+offset_right = -1040.0
+offset_bottom = -573.0
+grow_horizontal = 0
+grow_vertical = 0

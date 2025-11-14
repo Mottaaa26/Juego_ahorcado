@@ -1,0 +1,55 @@
+{
+	"normal": {
+		"faciles" : [
+			"Nombre del animal protagonista de Kung Fu Panda.",
+			"Princesa de hielo de Frozen.",
+			"Nombre del mago protagonista de Hogwarts",
+			"Héroe de Marvel con un martillo llamado Mjolnir.",
+			"Superheroe que usa un traje de hierro dorado y rojo.",
+			"Nombre del pez payaso que busca a su hijo.",
+			"Nombre del villano de buzz lightyear.",
+			"Villano con la sonrisa macabra en The Dark Knight.",
+			"Objeto que selecciona a los estudiantes de Hogwarts.",
+			"Robot azul del futuro que ayuda a Nobita.",
+		],
+		"dificiles": [
+			"Reino donde vive la familia real en Frozen",
+			"Reino ficticio donde reina T'Challa.",
+			"Ciudad donde ocurren los acontecimientos en 'It'.",
+			"Escuela donde estudian los jovenes mutante en X-MEN.",
+			"Planeta natal de superman.",
+			"Lugar donde se desarrolla Stranger Things.",
+			"Heroína interpretada por Gal Gadot",
+			"Nombre del detective, hermano mayor de Enola Holmes",
+			"Nombre del interés romántico de Barry Allen",
+			"Reino donde vive Daenerys Targaryen",
+		]
+	},
+	
+	"dificil": {
+		"faciles": [
+			"Apellido del director de Inception y Oppenheimer.",
+			"Nombre de la cuñada de Walter White.",
+			"Apellido del asesino experto interpretado por Keanu Reeves.",
+			"Ciudad ficticia donde vive Batman.",
+			"Robot de compañía en Big Hero 6.",
+			"Apellido del dueño de los pollos hermanos en Breaking Bad.",
+			"Inteligencia artificial de Tony Stark.",
+			"Nombre del protagonista de Coco.",
+			"Emoción azul en Inside Out.",
+			"Apellido del actor que interpreta a Sebastian en La la land.",
+		],
+		"dificiles": [
+			"Apellido del detective de Knives Out.",
+			"Nombre del planeta desértico de Dune.",
+			"Nombre de la Inteligencia artificial en Her.",
+			"Raza de Grogu en The Mandalorian.",
+			"Nombre del mineral más codiciado en Avatar.",
+			"Nombre de la hermana de Lucas en Stranger Things.",
+			"Planeta destruido por la Estrella de la Muerte.",
+			"Nombre del androide principal en Ex Machina.",
+			"Nombre del androide principal en Ex Machina.",
+			"Nombre de la nave en Guardians of the Galaxy.",
+		]
+	}
+}

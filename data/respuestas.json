@@ -1,0 +1,55 @@
+{
+	"normales": {
+		"faciles": [
+			"po",
+			"elsa",
+			"harry potter",
+			"thor",
+			"iron man",
+			"marlin",
+			"zurg",
+			"joker",
+			"sombrero",
+			"doraemon",
+		],
+		"dificiles": [
+			"arandelle",
+			"wakanda",
+			"derry",
+			"xavier",
+			"krypton",
+			"hawkings",
+			"wonder woman",
+			"sherlock holmes",
+			"iris",
+			"meeren",
+		]
+	},
+	
+	"dificiles": {
+		"faciles": [
+			"nolan",
+			"marie",
+			"wick",
+			"gotham",
+			"baymax",
+			"fring",
+			"jarvis",
+			"miguel",
+			"tristeza",
+			"gosling",
+		],
+		"dificiles": [
+			"blanc",
+			"arrakis",
+			"samantha",
+			"yoda",
+			"unobtainium",
+			"erica",
+			"alderaan",
+			"ava",
+			"vibranium",
+			"milano",
+		]
+	}
+}
