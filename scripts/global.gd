@@ -1,5 +1,8 @@
-extends Control
+# ESTE SCRIPT SERÁ GLOBAL PARA PODER ACCEDER A LAS PALABRAS
+# DEPENDIENDO LA DIFICULTAD ESCOGIDA POR EL USUARIO
+extends Node
 
+var dificultad_actual = "";
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

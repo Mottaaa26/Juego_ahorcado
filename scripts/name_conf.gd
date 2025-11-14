@@ -47,7 +47,6 @@ func _on_button_continuar_pressed() -> void:
 		mostrar_mensaje_error("El nombre no debe tener carácteres especiales.")
 		return
 		
-		
 	# SI NO HAY PROBLEMAS PASAMOS A LA SELECCIÓN DE DIFICULTAD
 	# TENEMOS QUE OBTENER LA RUTA DE LA ESCENA QUE QUEREMOS EJECUTAR CON EL METODO CHANGE_SCENE_TO_FILE
 	# DEL OBJETO GET_TREE() QUE OBTIENE EL ARBOL DE EJECUCION PRINCIPAL DEL JUEGO.

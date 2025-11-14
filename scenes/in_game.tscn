@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ijqax7103bob"]
 
 [ext_resource type="Texture2D" uid="uid://ceaj2xytttlh" path="res://media/imagenes/main_menu.png" id="1_7nptk"]
-[ext_resource type="Script" uid="uid://bpyg4wouje4lh" path="res://scenes/in_game.gd" id="1_h5xqe"]
+[ext_resource type="Script" uid="uid://bpyg4wouje4lh" path="res://scripts/in_game.gd" id="1_h5xqe"]
 [ext_resource type="FontFile" uid="uid://c3y1owof88k4m" path="res://fonts/Good-Game.ttf" id="2_ipuqq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5xqe"]
@@ -114,16 +114,16 @@ theme_override_font_sizes/font_size = 100
 text = "ASASDASMDAS"
 autowrap_mode = 1
 
-[node name="ContenedorLetras" type="VBoxContainer" parent="."]
+[node name="ContenedorLetras" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1080.0
-offset_top = -613.0
-offset_right = -1040.0
-offset_bottom = -573.0
+offset_left = -1011.0
+offset_top = -509.0
+offset_right = -92.0
+offset_bottom = -218.0
 grow_horizontal = 0
 grow_vertical = 0

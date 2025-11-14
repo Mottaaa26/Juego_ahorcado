@@ -104,7 +104,7 @@ theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxFlat_181ix")
 text = "DIFICIL"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="sonidoBotones" type="AudioStreamPlayer" parent="VBoxContainer"]
 stream = ExtResource("5_adodk")
 
 [connection signal="pressed" from="VBoxContainer/ButtonMedio" to="." method="_on_button_medio_pressed"]
