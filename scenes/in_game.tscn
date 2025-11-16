@@ -1,21 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ijqax7103bob"]
+[gd_scene load_steps=6 format=3 uid="uid://ijqax7103bob"]
 
 [ext_resource type="Texture2D" uid="uid://ceaj2xytttlh" path="res://media/imagenes/main_menu.png" id="1_7nptk"]
 [ext_resource type="Script" uid="uid://bpyg4wouje4lh" path="res://scripts/in_game.gd" id="1_h5xqe"]
 [ext_resource type="FontFile" uid="uid://c3y1owof88k4m" path="res://fonts/Good-Game.ttf" id="2_ipuqq"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5xqe"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
-bg_color = Color(1, 0.5686275, 0.3019608, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_color = Color(0, 0, 0, 0.1882353)
-shadow_size = 4
+[ext_resource type="AudioStream" uid="uid://btbqovhibck81" path="res://media/sonidos/sonido_botones.wav" id="4_5gm6p"]
+[ext_resource type="StyleBox" uid="uid://bqockpdnuq2w6" path="res://resources/letra_boton.tres" id="4_cela1"]
 
 [node name="InGame" type="Control"]
 layout_mode = 3
@@ -88,7 +77,7 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_ipuqq")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_h5xqe")
+theme_override_styles/normal = ExtResource("4_cela1")
 text = "SALIR"
 
 [node name="ContenedorPregunta" type="VBoxContainer" parent="."]
@@ -111,7 +100,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 theme_override_fonts/font = ExtResource("2_ipuqq")
 theme_override_font_sizes/font_size = 100
-text = "ASASDASMDAS"
 autowrap_mode = 1
 
 [node name="ContenedorLetras" type="GridContainer" parent="."]
@@ -121,9 +109,32 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1011.0
-offset_top = -509.0
+offset_left = -865.0
+offset_top = -424.0
 offset_right = -92.0
 offset_bottom = -218.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="sonidoBotones" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5gm6p")
+
+[node name="palabraDisplay" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -46.0
+offset_right = 925.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
+theme_override_fonts/font = ExtResource("2_ipuqq")
+theme_override_font_sizes/font_size = 100
+text = "PALABRA DISPLAY"
+
+[connection signal="pressed" from="ButtonSalir" to="." method="_on_button_salir_pressed"]
