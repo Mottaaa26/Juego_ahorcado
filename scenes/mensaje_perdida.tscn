@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://buywv46dc4kn1"]
+
+[ext_resource type="Texture2D" uid="uid://ceaj2xytttlh" path="res://media/imagenes/main_menu.png" id="1_w2ag5"]
+[ext_resource type="Script" uid="uid://b8rrc7hlwbnke" path="res://scripts/mensaje_perdida.gd" id="1_wkg2i"]
+[ext_resource type="FontFile" uid="uid://c3y1owof88k4m" path="res://fonts/Good-Game.ttf" id="2_wkg2i"]
+[ext_resource type="AudioStream" uid="uid://btbqovhibck81" path="res://media/sonidos/sonido_botones.wav" id="4_pvdbm"]
+[ext_resource type="AudioStream" uid="uid://dinjk4tfahn8h" path="res://media/sonidos/sonido_perdida.mp3" id="5_gjsk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvdbm"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.5686275, 0.3019608, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.1882353)
+shadow_size = 4
+
+[node name="MensajePerdida" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wkg2i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w2ag5")
+
+[node name="MensajePerdida" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -529.5
+offset_top = -171.0
+offset_right = 529.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
+theme_override_fonts/font = ExtResource("2_wkg2i")
+theme_override_font_sizes/font_size = 200
+text = "HAS PERDIDO!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonRegresar" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -122.5
+offset_top = -480.0
+offset_right = 122.5
+offset_bottom = -388.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_wkg2i")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_pvdbm")
+text = "REGRESAR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pvdbm")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gjsk3")
+autoplay = true
+
+[connection signal="pressed" from="ButtonRegresar" to="." method="_on_button_regresar_pressed"]

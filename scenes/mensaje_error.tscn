@@ -33,9 +33,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5803922)
+color = Color(0, 0, 0, 0.7019608)
 
 [node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,6 +51,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_2i0uy")
 theme_override_font_sizes/font_size = 100
+autowrap_mode = 2
 
 [node name="ButtonRegresar" type="Button" parent="."]
 texture_filter = 1

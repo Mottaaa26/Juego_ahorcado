@@ -71,7 +71,7 @@ func _ready() -> void:
 	
 	# SE CREA EL ABECEDARIO EN UNA VARIABLE PARA ITERAR Y CREAR LOS BOTONES PARA QUE 
 	# EL USUARIO PUEDA ESCRIBIR.
-	var letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+	var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	teclado_container.columns = 9  # Puedes ajustar esto según el espacio
 
 	for letra in letras:
@@ -117,9 +117,11 @@ func _on_letra_presionada(letra):
 		
 		if not "_" in _palabra_adivinando:
 			print("palabra adivinada, ganaste")
+			
 	else:
 		_intentos -= 1
-		print("Fallo. Intentos restantes: ", _intentos)
+		if(_intentos == 0):
+			get_tree().change_scene_to_file("res://scenes/mensaje_perdida.tscn")
 
 func _generar_nueva_palabra() -> void:
 	
